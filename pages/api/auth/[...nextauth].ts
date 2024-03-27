@@ -1,4 +1,4 @@
-import NextAuth, { NextAuthOptions } from "next-auth"
+import NextAuth, { NextAuthOptions } from "next-auth";
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
@@ -14,21 +14,24 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.WLD_CLIENT_ID,
       clientSecret: process.env.WLD_CLIENT_SECRET,
       idToken: true,
+      checks: ["state", "nonce", "pkce"],
       profile(profile) {
         return {
           id: profile.sub,
           name: profile.sub,
-          credentialType: profile["https://id.worldcoin.org/beta"].credential_type,
-        }
+          verificationLevel:
+            profile["https://id.worldcoin.org/v1"].verification_level,
+        };
       },
     },
   ],
   callbacks: {
     async jwt({ token }) {
-      token.userRole = "admin"
-      return token
+      token.userRole = "admin";
+      return token;
     },
   },
-}
+  debug: true,
+};
 
-export default NextAuth(authOptions)
+export default NextAuth(authOptions);
