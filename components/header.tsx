@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { signIn, signOut, useSession } from "next-auth/react"
-import styles from "./header.module.css"
+import styles from './reviews/reviews.module.css'
+
 
 // The approach used in this component shows how to build a sign in and sign out
 // component that works on pages which support both client and server side
@@ -10,10 +11,8 @@ export default function Header() {
   const loading = status === "loading"
 
   return (
-    <header>
-      <noscript>
-        <style>{`.nojs-show { opacity: 1; top: 0; }`}</style>
-      </noscript>
+    <header className={styles.header}>
+            <h1 className={styles.title}>World Reviews</h1>
       <div className={styles.signedInStatus}>
         <p
           className={`nojs-show ${
@@ -27,8 +26,8 @@ export default function Header() {
               </span>
               <a
                 href={`/api/auth/signin`}
-                className={styles.buttonPrimary}
-                onClick={(e) => {
+                className={styles.signIn}
+                                onClick={(e) => {
                   e.preventDefault()
                   signIn("worldcoin") // when worldcoin is the only provider
                   // signIn() // when there are multiple providers
@@ -65,7 +64,7 @@ export default function Header() {
           )}
         </p>
       </div>
-      <nav>
+      {/* <nav>
         <ul className={styles.navItems}>
           <li className={styles.navItem}>
             <Link href="/">Home</Link>
@@ -89,7 +88,7 @@ export default function Header() {
             <Link href="/me">Me</Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   )
 }
