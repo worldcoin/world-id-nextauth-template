@@ -18,6 +18,7 @@
     "Lluis Agusti <hi@llu.lu>"
   ],
   "dependencies": {
+    "mongodb": "^6.8.0",
     "next": "^13.5.6",
     "next-auth": "^4.24.7",
     "react": "^18.2.0",

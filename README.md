@@ -25,7 +25,7 @@ pnpm i
 Create a new application in the [Worldcoin Developer Portal](https://developer.worldcoin.org/). Staging apps must use the [Worldcoin Simulator](https://simulator.worldcoin.org) for authentication, whereas production apps will use the [World App](https://worldcoin.org/download).
 
 Add your callback URLs:
-  - (staging apps only) `http://localhost:3000/api/auth/callback/worldcoin`
+  - (staging apps only) `http://localhost:3002/api/auth/callback/worldcoin`
   - `https://your-app-url.com/api/auth/callback/worldcoin`
 
 Note your Client ID and Client Secret for the next step.

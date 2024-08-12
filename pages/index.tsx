@@ -1,14 +1,9 @@
 import Layout from "../components/layout"
-
+import Reviews from "../components/reviews/reviews"
 export default function IndexPage() {
   return (
     <Layout>
-      <h1>NextAuth.js Example</h1>
-      <p>
-        This is an example site to demonstrate how to use{" "}
-        <a href="https://next-auth.js.org">NextAuth.js</a> with {" "}
-        <a href ="https://worldcoin.org/world-id">World ID</a> for authentication.
-      </p>
+      <Reviews/>
     </Layout>
   )
 }
