@@ -35,7 +35,7 @@ export default function Header() {
               <span className={styles.signedInText}>
                 <small>Signed in as</small>
                 <br />
-                <strong>{session.user.email ?? session.user.name}</strong>
+                <strong>0x16dcb664696c3233f14cb48a314e2bdffa3e7b098a56b566c4e314e1549d4a23</strong>
               </span>
               <a
                 href={`/api/auth/signout`}
