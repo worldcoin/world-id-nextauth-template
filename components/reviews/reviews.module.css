@@ -112,3 +112,18 @@
     text-transform: uppercase;
     letter-spacing: 1px;
   }
+  .signedInText {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    max-width: 200px; /* Set a maximum width */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Ensure the text stays on one line */
+  }
+  
+  @media (max-width: 600px) {
+    .signedInText {
+      max-width: 150px; /* Adjust max width for smaller screens */
+    }
+  }

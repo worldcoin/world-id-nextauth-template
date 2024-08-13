@@ -33,7 +33,7 @@ export default function IndexPage() {
   
   return (
     <Layout>
-      {/* <Reviews/> */}
+      <a className={styles.button} href='/post'>{"+"}</a>
       <div className={styles.reviewsList}>
         {loading ? <div>Loading</div> : reviews.length > 0 ? reviews.map((review:any, index:any) => (
           <ReviewCard
