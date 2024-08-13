@@ -13,7 +13,6 @@
     align-items: center;
     margin-bottom: 2rem;
     color: #e0e0e0;
-    padding: 2rem;
 
   }
   .title {
@@ -22,6 +21,12 @@
     letter-spacing: 3px;
     color: #e0e0e0;
     font-family: 'Arial', sans-serif;
+  }
+  .signedInStatus p {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Adjust this value to control spacing between elements */
+    margin: 0;
   }
   
   .signIn {
@@ -34,10 +39,18 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
+    white-space: nowrap; /* Prevent text from breaking */
   }
   
   .signIn:hover {
     background-color: #333;
+  }
+
+  @media (max-width: 600px) {
+    .signIn {
+      padding: 0.25rem 0.5rem; /* Reduce padding for smaller screens */
+      font-size: 0.875rem; /* Adjust font size for smaller screens */
+    }
   }
   
   .form {
